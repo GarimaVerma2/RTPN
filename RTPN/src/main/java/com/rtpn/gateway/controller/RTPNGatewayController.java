@@ -35,60 +35,6 @@ public class RTPNGatewayController {
 	public String debit(@RequestBody DebitAddOperRequest request) {
 		String responseString = "";
 		
-		/*
-		 * try {
-		 * 
-		 * DefaultHttpClient httpClient = new DefaultHttpClient(); HttpPut putRequest =
-		 * new HttpPut( "https://firoutingmicroservice.azurewebsites.net/api/Routing");
-		 * 
-		 * StringEntity input = new
-		 * StringEntity("<DebitAddOperRequest xmlns:xsd=\"http://www.w3.org/2001.XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n"
-		 * + "	<EFXHdr>\r\n" + "		<Orrganization>\r\n" +
-		 * "				<OrgId>8871086</OrgId>\r\n" +
-		 * "				<Environment>ABTR</Environment>\r\n" +
-		 * "		</Orrganization>\r\n" + "	</EFXHdr>\r\n" + "	<DebitInfo>\r\n" +
-		 * "	<DebitType>Withdrawal</DebitType>\r\n" + "	<EffDt></EffDt>\r\n" +
-		 * "	<PostedDt></PostedDt>\r\n" +
-		 * "	<Desc>Abc to Gene Fagg +180012831713</Desc>\r\n" + "	<AcctRef>\r\n" +
-		 * "		<AcctId>5607314292</AcctId>\r\n" +
-		 * "		<AcctType>SDA</AcctType>\r\n" +
-		 * "		<FIIdentType>ABA</FIIdentType>\r\n" +
-		 * "		<FIIdent>325081403</FIIdent>\r\n" + "	</AcctRef>\r\n" +
-		 * "	<CurrAmt>\r\n" + "		<Amt>78.00</Amt>\r\n" + "		<CurCode>\r\n" +
-		 * "			<CurCodeType>ISO4217-Alpha</CurCodeType>\r\n" +
-		 * "			<CurCodeValue>USD</CurCodeValue>\r\n" + "		</CurCode>\r\n"
-		 * + "	</CurrAmt>\r\n" + "	</DebitInfo>\r\n" + "</DebitAddOperRequest>");
-		 * input.setContentType("application/xml"); putRequest.setEntity(input);
-		 * 
-		 * HttpResponse response = httpClient.execute(putRequest);
-		 * 
-		 * 
-		 * if (response.getStatusLine().getStatusCode() != 200) { throw new
-		 * RuntimeException("Failed : HTTP error code : " +
-		 * response.getStatusLine().getStatusCode()); }
-		 * 
-		 * 
-		 * BufferedReader br = new BufferedReader( new
-		 * InputStreamReader((response.getEntity().getContent())));
-		 * 
-		 * 
-		 * System.out.println("Output from Server .... \n"); while ((output =
-		 * br.readLine()) != null) { //System.out.println(output);
-		 * responseString+=output; }
-		 * 
-		 * httpClient.getConnectionManager().shutdown();
-		 * 
-		 * } catch (MalformedURLException e) {
-		 * 
-		 * e.printStackTrace();
-		 * 
-		 * } catch (IOException e1) {
-		 * 
-		 * e1.printStackTrace();
-		 * 
-		 * }
-		 */
-		
 		  RestTemplate restTemplate = new RestTemplate();
 			String uri = "https://firoutingmicroservice.azurewebsites.net/api/Routing";
 		        HttpHeaders headers = new HttpHeaders();
